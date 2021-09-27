@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./../static/css/style.css') }}">
+    <title>Checkerboard</title>
+</head>
+<body>
+    <h1>***Checkerboard***</h1>
+    <section>
+        {% for i in range(0,numRow) %}
+        <div>
+            {% for element in range(0,numCol) %}
+            <div class="boxColor{{ (element + i)%2+1 }}"></div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
